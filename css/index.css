@@ -130,10 +130,72 @@ video{
     object-fit: contain;
 }
 .body-container-div{
+    height: 80%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+.selection-box{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.selection-flag{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: black;
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
+    margin: 0 5px;
+}
+.selection-flag img{
+    width: 40px;
+    height: 40px;
+}
+.body-container-div select{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    margin: 5px;
+}
+.displaying-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding-top: 30px;
+}
+.displaying-box div{
+    width: 200px;
+    height: 150px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+}
+.displaying-box div p{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 /*section part*/
@@ -278,6 +340,9 @@ video{
     color: white;
 }
 @media screen and (max-width: 800px){
+    .body-container-div{
+        width: 600px;
+    }
     .section-container-div-con{
         width: 350px;
     }
@@ -299,6 +364,27 @@ video{
     }
     
 }
+@media screen and (max-width: 600px){
+    .body-container-div{
+        width: 500px;
+    }
+    .displaying-box div{
+        width: 170px;
+        height: 120px;
+    }
+}
+@media screen and (max-width: 500px){
+    .body-container-div{
+        width: 450px;
+    }
+    .displaying-box div{
+        width: 150px;
+        height: 110px;
+    }
+    .displaying-box div p{
+        font-size: 15px;
+    }
+}
 @media screen and (max-width: 460px){
     .navbar-logo{
         width: 60%;
@@ -309,5 +395,31 @@ video{
     }
     .side-menu-container li{
         font-size: 18px;
+    }
+    .body-container{
+        height: 70vh;
+    }
+    .body-container-div{
+        width: 400px;
+    }
+    .displaying-box div{
+        width: 120px;
+        height: 80px;
+    }
+    .displaying-box div p{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 400px){
+    .body-container-div{
+        width: auto;
+        padding: 20px;
+    }
+    .displaying-box div{
+        width: 110px;
+        height: 70px;
+    }
+    .displaying-box div p{
+        font-size: 12px;
     }
 }
