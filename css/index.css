@@ -26,6 +26,41 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
+@-webkit-keyframes rotating{
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+.navbar-logo:hover i{
+    -webkit-animation: rotating 4s linear infinite;
+    -moz-animation: rotating 4s linear infinite;
+    -ms-animation: rotating 4s linear infinite;
+    -o-animation: rotating 4s linear infinite;
+    animation: rotating 4s linear infinite;
+}
 .navbar-function-container{
     width: 59%;
     height: 100%;
@@ -160,7 +195,7 @@ video{
     height: 40px;
 }
 .body-container-div select{
-    width: 100px;
+    width: 120px;
     height: 40px;
     outline: none;
     border: none;
@@ -184,9 +219,37 @@ video{
     width: 200px;
     height: 150px;
     border-radius: 30px;
-    background-color: black;
     color: white;
     margin: 10px;
+    opacity: 0.7;
+    /* background-color: black; */
+}
+.displaying-box div:nth-child(1){
+    background-color: hsl(244, 53%, 70%);
+}
+.displaying-box div:nth-child(1) p:nth-child(1){
+    background-color: hsl(244, 53%, 50%);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-weight: bold;
+}
+.displaying-box div:nth-child(2){
+    background-color: hsl(353, 93%, 70%);
+}
+.displaying-box div:nth-child(2) p:nth-child(1){
+    background-color: hsl(353, 93%, 50%);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-weight: bold;
+}
+.displaying-box div:nth-child(3){
+    background-color: hsl(353, 6%, 70%);
+}
+.displaying-box div:nth-child(3) p:nth-child(1){
+    background-color: hsl(353, 6%, 50%);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-weight: bold;
 }
 .displaying-box div p{
     width: 100%;
@@ -196,6 +259,14 @@ video{
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    color: white;
+}
+.displaying-box div p:nth-child(2){
+    height: 60%;
+}
+.small-date{
+    width: 100%;
+    height: 40px;
 }
 
 /*section part*/

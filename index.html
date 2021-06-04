@@ -58,7 +58,7 @@
             <video src="video/video-1.mp4" muted autoplay loop></video>
             <div class="body-container-div">
                 <div class="selection-box">
-                    <div class="selection-flag"><img src="icon/malaysia.png" alt=""></div>
+                    <div id="select_flag" class="selection-flag"><img src="icon/malaysia.png" alt=""></div>
                     <select id="body_selection">
                         <option value="Indonesia">Indonesia</option>
                         <option value="Vietnam">Vietnam</option>
@@ -71,26 +71,29 @@
                         <option value="Timor-Leste">Timor-Leste</option>
                     </select>
                 </div>
+                <div class="small-date">
+                    <p>Today</p>
+                </div>
                 <div class="displaying-box">
                     <div>
                         <p>Total Population</p>
-                        <p>Result</p>
+                        <p id="population">Result</p>
                     </div>
                     <div>
-                        <p>Total Population</p>
-                        <p>Result</p>
+                        <p>Total Confirmed</p>
+                        <p id="confirmed">Result</p>
                     </div>
                     <div>
-                        <p>Total Population</p>
-                        <p>Result</p>
+                        <p>Total Deaths</p>
+                        <p id="death">Result</p>
                     </div>
                     <div>
-                        <p>Total Population</p>
-                        <p>Result</p>
+                        <p>Latest Update</p>
+                        <p id="update">Result</p>
                     </div>
                     <div>
-                        <p>Total Population</p>
-                        <p>Result</p>
+                        <p>Death Percentage</p>
+                        <p id="percentage">Result</p>
                     </div>
                 </div>
             </div>
