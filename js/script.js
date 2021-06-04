@@ -16,6 +16,7 @@ cancelSide.addEventListener('click', function(){
 document.getElementById("logo").addEventListener("click", function(){
     openPage("home");
 })
+
 document.getElementById('nav_symptoms').addEventListener('mouseover', function(){
     hover(1);
 })
@@ -23,20 +24,38 @@ document.getElementById('nav_symptoms').addEventListener('mouseleave', function(
     hoverLeave(1);
 })
 document.getElementById('nav_symptoms').addEventListener('click', function(){
-    
+    openPage("symptoms");
 })
+document.getElementById('side_symptoms').addEventListener('click', function(){
+    openPage("symptoms");
+})
+
 document.getElementById('nav_statistics').addEventListener('mouseover', function(){
     hover(2);
 })
 document.getElementById('nav_statistics').addEventListener('mouseleave', function(){
     hoverLeave(2);
 })
+document.getElementById('nav_statistics').addEventListener('click', function(){
+    openPage("statistics");
+})
+document.getElementById('side_statistics').addEventListener('click', function(){
+    openPage("statistics");
+})
+
 document.getElementById('nav_prevention').addEventListener('mouseover', function(){
     hover(3);
 })
 document.getElementById('nav_prevention').addEventListener('mouseleave', function(){
     hoverLeave(3);
 })
+document.getElementById('nav_prevention').addEventListener('click', function(){
+    openPage("prevention");
+})
+document.getElementById('side_prevention').addEventListener('click', function(){
+    openPage("prevention");
+})
+
 document.getElementById('nav_treatment').addEventListener('mouseover', function(){
     hover(4);
 })
@@ -44,6 +63,9 @@ document.getElementById('nav_treatment').addEventListener('mouseleave', function
     hoverLeave(4);
 })
 document.getElementById('nav_treatment').addEventListener('click', function(){
+    openPage("treatment");
+})
+document.getElementById('side_treatment').addEventListener('click', function(){
     openPage("treatment");
 })
 
@@ -93,16 +115,16 @@ function openPage(page){
             window.open('/', "_self");
             break;
         case "symptoms":
-            //window.open('partial/treatment.html', "_self");
+            //window.open('/partial/treatment.html', "_self");
             break;
         case "statistics":
-            //window.open('partial/treatment.html', "_self");
+            //window.open('/partial/treatment.html', "_self");
             break;
         case "prevention":
-            //window.open('partial/treatment.html', "_self");
+            window.open('/partial/prevention.html', "_self");
             break;
         case "treatment":
-            window.open('partial/treatment.html', "_self");
+            window.open('/partial/treatment.html', "_self");
             break;
     }
 }
