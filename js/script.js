@@ -115,16 +115,16 @@ function openPage(page){
             window.open('../', "_self");
             break;
         case "symptoms":
-            window.open('../partial/symptoms.html', "_self");
+            window.open('/GlobalClassroom_Covid19/partial/symptoms.html', "_self");
             break;
         case "statistics":
-            window.open('../partial/statistics.html', "_self");
+            window.open('/GlobalClassroom_Covid19/partial/statistics.html', "_self");
             break;
         case "prevention":
-            window.open('../partial/prevention.html', "_self");
+            window.open('/GlobalClassroom_Covid19/partial/prevention.html', "_self");
             break;
         case "treatment":
-            window.open('../partial/treatment.html', "_self");
+            window.open('/GlobalClassroom_Covid19/partial/treatment.html', "_self");
             break;
     }
 }
