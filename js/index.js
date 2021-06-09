@@ -1,11 +1,25 @@
 var flag = document.getElementById("select_flag");
 
+getCovidStatus("176");
+
 document.getElementById("body_selection").addEventListener('click', function(){
     updating(document.getElementById("body_selection").value);
 })
-getCovidStatus("176");
+document.getElementById('sec_symptoms').addEventListener('click', function(){
+    openPage('symptoms');
+})
+document.getElementById('sec_statistics').addEventListener('click', function(){
+    openPage('statistics');
+})
+document.getElementById('sec_prevention').addEventListener('click', function(){
+    openPage('prevention');
+})
+document.getElementById('sec_treatment').addEventListener('click', function(){
+    openPage('treatment');
+})
+
 function getCovidStatus(id){
-    fetch(`https://coronavirus-tracker-api.herokuapp.com/v2/locations/`+id).then(function(res){
+    fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations/'+id).then(function(res){
         return res.json();
     }).then(function(data){
         var population = data.location.country_population;
@@ -24,8 +38,8 @@ function getCovidStatus(id){
         document.getElementById("confirmed").innerHTML = confirmedForamt;
         document.getElementById("death").innerHTML = deathsFormat;
         document.getElementById("update").innerHTML = updateFormat;
+        document.getElementById("small_update").innerHTML = updateFormat;
         document.getElementById("percentage").innerHTML = percent;
-        console.log(populationFormat, updateFormat, confirmedForamt, deathsFormat, percent);
     }).then(function(error){
         console.log(error);
     })
@@ -67,6 +81,22 @@ function updating(country){
         case "Timor-Leste":
             flag.innerHTML = '<img src="../icon/timor-leste.png" alt="">'
             getCovidStatus("246");
+            break;
+    }
+}
+function openPage(page){
+    switch(page){
+        case "symptoms":
+            window.open('/partial/symptoms.html', "_self");
+            break;
+        case "statistics":
+            window.open('/partial/statistics.html', "_self");
+            break;
+        case "prevention":
+            window.open('/partial/prevention.html', "_self");
+            break;
+        case "treatment":
+            window.open('/partial/treatment.html', "_self");
             break;
     }
 }

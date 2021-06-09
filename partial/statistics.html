@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid 19 - Home</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Covid 19 - Prevention</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/statistics.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" 
     integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
@@ -53,85 +55,43 @@
             <li id="side_treatment">Treatment<i class="fas fa-user-md"></i></li>
         </ul>
     </div>
-    <div id="main-index">
-        <div class="body-container">
-            <video src="video/video-1.mp4" muted autoplay loop></video>
-            <div class="body-container-div">
-                <div class="selection-box">
-                    <div id="select_flag" class="selection-flag"><img src="icon/malaysia.png" alt=""></div>
-                    <select id="body_selection">
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Vietnam">Vietnam</option>
-                        <option value="Philippines">Philippines</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Malaysia" selected>Malaysia</option>
-                        <option value="Laos">Laos</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Timor-Leste">Timor-Leste</option>
-                    </select>
-                </div>
-                <div class="small-date">
-                    <p>Lastest Update: </p>
-                    <p id="small_update">Date</p>
-                </div>
-                <div class="displaying-box">
-                    <div>
-                        <p>Total Population</p>
-                        <p id="population">Result</p>
-                    </div>
-                    <div>
-                        <p>Total Confirmed</p>
-                        <p id="confirmed">Result</p>
-                    </div>
-                    <div>
-                        <p>Total Deaths</p>
-                        <p id="death">Result</p>
-                    </div>
-                    <div>
-                        <p>Latest Update</p>
-                        <p id="update">Result</p>
-                    </div>
-                    <div>
-                        <p>Death Percentage</p>
-                        <p id="percentage">Result</p>
-                    </div>
-                </div>
+    <div class="sta-body-container">
+        <div class="body-country-con">
+            <div id="img_icon" class="img-con">
+                <img src="../icon/malaysia.png" alt="">
             </div>
+            <select id="country_selection">
+                <option value="Indonesia">Indonesia</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Malaysia" selected>Malaysia</option>
+                <option value="Laos">Laos</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Timor-Leste">Timor-Leste</option>
+            </select>
         </div>
-        <div class="section-container">
-            <div class="section-container-div-con">
-                <div class="section-container-div-half">
-                    <div id="sec_prevention" class="section-pic">
-                        <div class="section-div">
-                            <p class="section-div-p">Prevention</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-container-div-half">
-                    <div id="sec_statistics" class="section-pic">
-                        <div class="section-div">
-                            <p class="section-div-p">Statistics</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-container-div-half">
-                    <div id="sec_symptoms" class="section-pic">
-                        <div class="section-div">
-                            <p class="section-div-p">Symptoms</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-container-div-half">
-                    <div id="sec_treatment" class="section-pic">
-                        <div class="section-div">
-                            <p class="section-div-p">Treatment</p>
-                        </div>
-                    </div>
-                </div>    
-            </div>
+        <div class="body-con-div cases-div">
+            <h3>Confirmed Cases</h3>
+            <p id="total_cases">321323212</p>
+            <p id="today_cases">+321322</p>
+        </div>
+        <div class="body-con-div recover-div">
+            <h3>Recovered</h3>
+            <p id="total_recovered">321323212</p>
+            <p id="today_recovered">+321322</p>
+        </div>
+        <div class="body-con-div death-div">
+            <h3>Deaths</h3>
+            <p id="total_death">321323212</p>
+            <p id="today_death">+321322</p>
         </div>
     </div>
+    <div class="sta-chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+    
     <footer class="footer-container">
         <div class="footer-top">
             <div class="footer-div-container">
@@ -173,7 +133,8 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/statistics.js"></script>
 </body>
 </html>
