@@ -87,16 +87,16 @@ function updating(country){
 function openPage(page){
     switch(page){
         case "symptoms":
-            window.open('/partial/symptoms.html', "_self");
+            window.open('https://<user.name>.github.io/<repo.name>/partial/symptoms.html', "_self");
             break;
         case "statistics":
-            window.open('/partial/statistics.html', "_self");
+            window.open('https://<user.name>.github.io/<repo.name>/partial/statistics.html', "_self");
             break;
         case "prevention":
-            window.open('/partial/prevention.html', "_self");
+            window.open('https://<user.name>.github.io/<repo.name>/partial/prevention.html', "_self");
             break;
         case "treatment":
-            window.open('/partial/treatment.html', "_self");
+            window.open('https://<user.name>.github.io/<repo.name>/partial/treatment.html', "_self");
             break;
     }
 }
