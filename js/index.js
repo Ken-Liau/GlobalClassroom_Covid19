@@ -19,7 +19,7 @@ document.getElementById('sec_treatment').addEventListener('click', function(){
 })
 
 function getCovidStatus(id){
-    fetch(`https://coronavirus-tracker-api.herokuapp.com/v2/locations/`+id).then(function(res){
+    fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations/'+id).then(function(res){
         return res.json();
     }).then(function(data){
         var population = data.location.country_population;
@@ -40,7 +40,6 @@ function getCovidStatus(id){
         document.getElementById("update").innerHTML = updateFormat;
         document.getElementById("small_update").innerHTML = updateFormat;
         document.getElementById("percentage").innerHTML = percent;
-        console.log(populationFormat, updateFormat, confirmedForamt, deathsFormat, percent);
     }).then(function(error){
         console.log(error);
     })

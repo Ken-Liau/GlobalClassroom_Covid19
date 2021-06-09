@@ -56,8 +56,42 @@
         </ul>
     </div>
     <div class="sta-body-container">
+        <div class="body-country-con">
+            <div id="img_icon" class="img-con">
+                <img src="../icon/malaysia.png" alt="">
+            </div>
+            <select id="country_selection">
+                <option value="Indonesia">Indonesia</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Malaysia" selected>Malaysia</option>
+                <option value="Laos">Laos</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Timor-Leste">Timor-Leste</option>
+            </select>
+        </div>
+        <div class="body-con-div cases-div">
+            <h3>Confirmed Cases</h3>
+            <p id="total_cases">321323212</p>
+            <p id="today_cases">+321322</p>
+        </div>
+        <div class="body-con-div recover-div">
+            <h3>Recovered</h3>
+            <p id="total_recovered">321323212</p>
+            <p id="today_recovered">+321322</p>
+        </div>
+        <div class="body-con-div death-div">
+            <h3>Deaths</h3>
+            <p id="total_death">321323212</p>
+            <p id="today_death">+321322</p>
+        </div>
+    </div>
+    <div class="sta-chart-container">
         <canvas id="myChart"></canvas>
     </div>
+    
     <footer class="footer-container">
         <div class="footer-top">
             <div class="footer-div-container">
